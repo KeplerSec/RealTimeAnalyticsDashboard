@@ -23,7 +23,7 @@ const io = new Server(server, {
 app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://kepler:kepler69.@cluster0.akdya80.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb-connection')
   .then(() => console.log('Connecté à MongoDB'))
   .catch(err => console.error('Erreur MongoDB:', err.message));
 
